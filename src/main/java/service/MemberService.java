@@ -16,6 +16,7 @@ public class MemberService implements UserDetailsService {
 
     public Member findById(String id){
         return dao.findById(id).get();
+        //git test
     }
 
     @Override
