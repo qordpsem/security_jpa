@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class MemberController {
     @Autowired
-    MemberDAO memberDAO;
+    private MemberDAO memberDAO;
 
     @Autowired
     private PasswordEncoder passwordEncoder;

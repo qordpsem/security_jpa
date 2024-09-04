@@ -1,4 +1,4 @@
-package service;
+package com.example.security_jpa.service;
 
 import com.example.security_jpa.dao.MemberDAO;
 import com.example.security_jpa.entity.Member;
@@ -22,7 +22,7 @@ public class MemberService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Member m = findById(username);
         if(m == null) {
-            throw new UsernameNotFoundException(username);
+            throw new UsernameNotFoundException("사용자 찾을 수 없음 : "+username);
         }
         return User.builder()
                 .username(m.getId())
