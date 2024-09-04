@@ -16,10 +16,6 @@ public class MemberController {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public MemberController(PasswordEncoder passwordEncoder) {
-        this.passwordEncoder = passwordEncoder;
-    }
-
     @GetMapping("/login")
     public void login() {
 

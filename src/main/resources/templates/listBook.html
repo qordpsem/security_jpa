@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-  <h2>도서목록</h2>
+<!--<span th:text="${session.loginUSER.id}+'('+${session.loginUSER.name}+')님 로그인하였습니다.'"></span>-->
+<th:block th:include="header.html"></th:block>
+<h2>도서목록</h2>
 </body>
 </html>

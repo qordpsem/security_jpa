@@ -14,15 +14,14 @@ public class MemberService implements UserDetailsService {
     @Autowired
     private MemberDAO dao;
 
-    public Member findById(String id){
+    public Member findById(String id) {
         return dao.findById(id).get();
-        //git test
     }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Member m = findById(username);
-        if(m == null){
+        if(m == null) {
             throw new UsernameNotFoundException(username);
         }
         return User.builder()
